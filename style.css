@@ -325,26 +325,48 @@ a:hover {
 /* ---------------------------------- */
 
 .hero-section {
-  position: sticky; /* Noodzakelijk voor de positionering van de video */
-  height: 170vh; /* Volledige hoogte van het venster */
-  display: grid; /* Gebruik grid voor perfecte centrering van de content */
-  top: 0;
-  text-align: center;
-  padding: 0 var(--site-padding); /* Ruimte links/rechts op kleine schermen */
-  overflow: hidden; /* Zorgt ervoor dat de video niet buiten de sectie komt */
-  background-color: rgba(30, 30, 30, 0);
-  z-index: -1;
+    position: sticky; /* ESSENTIEEL: Dit creëert het "plakkerige" scroll-effect */
+    top: 0;           /* Zorgt dat het aan de bovenkant plakt */
+    height: 170vh;    /* De extra hoogte zorgt voor het scroll-effect "over" de sectie */
+
+    display: grid;
+    text-align: center;
+    padding: 0 var(--site-padding);
+    overflow: hidden;
+    background-color: rgba(30, 30, 30, 0.3);
+    z-index: -1;      /* Zorgt dat de volgende content eroverheen kan scrollen */
 }
 
+/* De video-achtergrond, dit was al correct */
+.hero-afbeelding {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    /* Behoud deze, ze definiëren het 'kader' */
+    width: 100vw;
+    height: 100vh;
+
+    /* DIT IS DE MAGISCHE REGEL */
+    object-fit: cover;
+
+    /* Deze blijven hetzelfde */
+    z-index: -2;
+    pointer-events: none;
+}
+
+/* De tekst binnen de hero-sectie */
 .hero-section p {
-  /* Optioneel: override h1-stijl indien nodig, bv. nog groter */
-  font-size: clamp(5rem, 10vw, 12rem);
-  font-weight: 800;
-  line-height: 1;
-  margin-top: 40vh;
-  color: var(--color-accent);
-  text-align: center;
-  position: relative;
+    position: relative; /* Nodig om de tekst boven de video te houden */
+
+    /* Jouw originele stijlen voor positionering en opmaak */
+    font-size: clamp(3rem, 10vw, 12rem);
+    font-weight: 800;
+    line-height: 1;
+    margin-top: 40vh; /* Duwt de tekst omlaag in de hoge (170vh) sectie */
+    color: var(--color-accent);
+    text-align: center;
 }
 
 .intro-section {
@@ -613,6 +635,12 @@ a:hover {
   .hero-section {
     height: 170vh;
   }
+
+  .hero-section p {
+    text-align: left;
+    margin-top: 45vh;
+  }
+
   .evenementen {
     flex-direction: column;
   }
