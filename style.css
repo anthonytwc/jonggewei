@@ -370,13 +370,13 @@ a:hover {
 }
 
 .intro-section {
-  padding: calc(var(--site-padding)* 5) 0 calc(var(--site-padding)* 5) 0;
+  padding: calc(var(--site-padding)* 5) calc(var(--site-padding)* 0.1) calc(var(--site-padding)* 5) calc(var(--site-padding)* 0.1);
   height: 80vh;
 }
 
 .intro-section p {
-  font-size: clamp(1.5rem, 2vw, 3rem);
-  text-align: left;
+  font-size: clamp(1rem, 2vw, 3rem);
+  text-align: center;
 }
 
 
@@ -633,12 +633,21 @@ a:hover {
 
 @media (max-width: 768px) {
   .hero-section {
-    height: 170vh;
+    height: 180vh;
   }
 
   .hero-section p {
     text-align: left;
-    margin-top: 45vh;
+    margin-top: 50vh;
+  }
+
+  .intro-section {
+    padding: calc(var(--site-padding)* 5) calc(var(--site-padding)* 0) calc(var(--site-padding)* 5) calc(var(--site-padding)* 0);
+    height: 80vh;
+  }
+
+  .intro-section p {
+    text-align: Left;
   }
 
   .evenementen {
