@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="nl-BE">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jong Gewei</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;700&family=Outfit:wght@400;700&family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- De header staat nu BINNEN een container voor de juiste uitlijning -->
+    <div class="container-hero">
+        <header class="main-header">
+            <div class="logo">
+                <a href="./index.html">Jonge Gewei</a>
+            </div>
+            <button class="hamburger-button" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="./agendas.html">Agenda's</a></li>
+                    <li><a href="/werk">Werk</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+
+    <div class="scrolling-banner">
+        <div class="scrolling-banner__content">
+            <!-- De tekst wordt gedupliceerd voor een naadloze loop -->
+            <span><a href="https://jonggewei.be" target="_blank">NIEUWSTE INFORMATIE • INSCHRIJVINGEN NU OPEN • </a></span>
+            <span><a href="https://jonggewei.be" target="_blank">NIEUWSTE INFORMATIE • INSCHRIJVINGEN NU OPEN • </a></span>
+        </div>
+    </div>
+
+    <main>
+        <section class="hero-section">
+          <p class="hero-tekst">Jong Gewei</p>
+        </section>
+        <!-- De rest van de content komt weer BINNEN een container -->
+        <div class="container">
+          <section class="intro-section">
+            <p>Jong Gewei is een creatieve arena voor iedereen van 16 tot 99. Wij slopen de drempels naar het podium en ontketenen talent. In een veilige omgeving dagen we uit met gedurfd experiment, kritisch onderzoek en de confrontatie met kunst en tegenstrijdigheden. Als kritische stem in het multiculturele Gent, claimen wij het podium om de rauwe diversiteit van de straat te tonen. <a href="https://www.jonggewei.be/site/">Lees verder over Jong Gewei.</a></p>
+          </section>
+          <section>
+            <h2>Publieke aanwezigheid.</h2>
+            <h3>2025</h3>
+            <article class="evenementen">
+              <div class="praktische-info">
+                <p class="datum">12 april,</p>
+                <p class="uren">vanaf 20u30</p>
+                <!--<p class="prijs">vrije bijdragen</p>-->
+              </div>
+              <div class="inhoud">
+                <h4 class="evenement-titel">Club Courage, publiek toonmoment/werkweek</h4>
+                <p class="locatie"><a href="https://www.deviezegasten.org/nl" target="_blank">@ Bij De Vieze Gasten</a> Haspelstraat 31, 9000 Gent</p>
+                <div class="details-grid">
+                  <div class="column column-1">
+                    <p class="details-titel">Informatie:</p>
+                    <p>Dit clubmoment brengt je een onvergetelijke avond vol vurige teksten, huisgebrouwen spoken word en theater.🔥 Dit alles op de beats van de enige echte king of the club: 🐀 DJ FAT BOY 🐀
+Deze iconische line-up is niet te missen. Kom dus zeker op zaterdag 12 april naar CLUB COURAGE! tickets te verkijgen via de website van <a href="https://www.deviezegasten.org/nl" target="_blank">@deviezegasten</a>.</p>
+                  </div>
+
+                </div>
+              </div>
+
+            </article>
+          </section>
+        </div>
+    </main>
+
+    <!-- Dit script is nodig om de hamburger-knop te laten werken -->
+    <script>
+          // Hamburger Menu
+          const hamburgerButton = document.querySelector('.hamburger-button');
+          const header = document.querySelector('.main-header');
+          hamburgerButton.addEventListener('click', () => {
+              header.classList.toggle('menu-open');
+          });
+      </script>
+
+
+
+</body>
+
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-top">
+            <div class="footer-titel column column-1">
+                <h1>Jong Gewei</h1>
+                <h2>Kloppend Hert vzw.</h2>
+                <p>BTW nummer: BE0511 933 930</p>
+            </div>
+            <div class="steuning column column-2">
+                <p>Met de steun van:</p>
+                <img src="./subsidies/vg_zwart.png" alt="Vlaamse Overheid">
+                <img src="./subsidies/gent_zwart.png" alt="Stad Gent">
+            </div>
+        </div>
+
+        <div class="footer-middle">
+            <div class="footer-section">
+                <h4>Sitemap</h4>
+                <ul>
+                    <li><a href="https://www.jonggewei.be/site/">Agenda</a></li>
+                    <li><a href="https://www.jonggewei.be/site/">Projecten</a></li>
+                    <li><a href="https://www.jonggewei.be/site//">Saas/Dashboard</a></li>
+                    <li><a href="https://www.jonggewei.be/site/">Consultant</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Partners-in-crime</h4>
+                <ul>
+                    <li><a href="https://www.transfocollect.com" target="_blank">TransfoCollect</a></li>
+                    <li><a href="https://www.deviezegasten.org/nl" target="_blank">Bij' De Vieze Gasten</a></li>
+                    <li><a href="https://schoolofartsgent.be" target="_blank">KASK & Conservatorium</a></li>
+                    <li><a href="https://www.viernulvier.gent" target="_blank">VIERNULVIER</a></li>
+                    <li><a href="https://kunsthal.gent/residentie/tot-in-de-stad" target="_blank">Tot in de Stad!</a></li>
+                    <li><a href="https://stadsmakers.wordpress.com" target="_blank">De stadsmakers cv</a></li>
+                </ul>
+            </div>
+            <div class="footer-section sociale-media">
+                <h4>Sociale media</h4>
+                <a href="https://www.instagram.com/jonggewei/" target="_blank"><img src="./sociale-media/icoon_instagram.png" alt="Jong Gewei Instagram"></a>
+                <a href="https://www.facebook.com/jonggewei/" target="_blank"><img src="./sociale-media/icoon_facebook.png" alt="Jong Gewei Instagram"></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p class="logo-text">Jong Gewei</p>
+    </div>
+</footer>
+</html>
